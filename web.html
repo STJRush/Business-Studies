@@ -15,6 +15,11 @@
 	<!-- This also helps the navbar on our website to operate; this links with the sources in the header of our HTML code -->	
 	<style TYPE="text/css">
 	  
+	#img {
+		  align: middle;
+	  position: relative;
+    }
+				
   img.round {
     border: 2px solid white;
     border-radius: 14px;
@@ -41,6 +46,7 @@
 		  font-style: italic;
 	font-family: Montserrat;	  }
   .margin {margin-bottom: 45px;}
+		
   .bg-1 { 
       background-color: #7B71D0; /* Light Purple */
       color: #ffffff;
@@ -58,7 +64,7 @@
       color: #ffffff;
   }
 		
-		.bg-5 { 
+	.bg-5 { 
       background-color: #79a0e0; /* Light Blue */
       color: #ffffff;
   }
@@ -75,7 +81,7 @@
 		
   .container-fluid {     
       padding-top: 70px;
-      padding-bottom: 70px;
+      padding-bottom: 70px;   /* This is the formatting of our Dividers and Sections */
   }
 
   .navbar {
@@ -87,8 +93,7 @@
       font-size: 12px;
       letter-spacing: 5px;
   }
-		
-		
+				
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
@@ -129,7 +134,6 @@ a.nav-link:active
    text-decoration: none;
 }
 		
-
    a:link, a:visited, a:hover, a:active { color: #ff8080;
        text-decoration: none; font-size: 22px;
      }
@@ -206,7 +210,7 @@ Business studies explores the interdependence of economic prosperity, societal w
 <div class="container-fluid bg-3 text-center">    
 <A NAME="what"></A>
   <h3 class="margin">What We Do?</h3><br>
-  <img class="round" src="https://educate.ie/sites/default/files/styles/product_full/public/networkbundle2.png?itok=1MuALIPa" width="500" height="500"><br>
+  <img id="img" src="https://educate.ie/sites/default/files/styles/product_full/public/networkbundle2.png?itok=1MuALIPa" width="500" height="500"><br>
   <!-- Fourth Row -->
   <div class="row">
     <div class="col-sm-4">
@@ -356,8 +360,9 @@ level. <br>
 	<p> What the Subjects are all about? </p>
 	<p><strong>Economics:</strong><br>Leaving Certificate economics provides students with the knowledge and skills necessary for understanding how the Irish and global economy functions. The learning experiences in economics develop students’ critical thinking, problem solving, decision-making and numeracy skills. Economics provides students with a learning foundation for a wide range of careers in business, economics, finance, enterprise and management.<br><strong>The Course:</strong><br> The subject is concerned with understanding the workings of a modern economy from both Macro and Micro level. Leaving Cert economics consists of eight main examination question areas:
 
-Subject content
-
+		<br>
+Subject Content:
+<br>
 Demand, supply, equilibrium, utility and elasticity
 Costs and market structures
 Factors of production (including economists)
@@ -435,14 +440,14 @@ From time to time there may be field trips or guest speakers where the course al
 	
 	<br><br><br>
 	<h3>Real-Time, Live Information on Current EUR->GBP Currency Market:</h3>
-	<center><img class="round" src="Currency.PNG" width="500" height="500"><br></center>
+	<center><img class="round" src="Currency.PNG" width="750" height="500"><br></center>
 
 	</div>
 	
 	<!-- We are using Javascript to create a  Quote Generator. This can updated and changed around using other funcions available via JS, which islike a text-based program for Web Design -->
 	
 	<SCRIPT LANGUAGE="JAVASCRIPT">  
-<!-- // Our JS Code
+<!-- // Our JS Code, to create a Random Quote Generator
 var r_text = new Array (); 
 r_text[0] = "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.";
 r_text[1] = "We're all working together; that's the secret."; 
@@ -459,9 +464,11 @@ var i = Math.floor(r_text.length * Math.random());
 document.write("<br /><br /><br /><br /><center><FONT SIZE=40><FONT COLOR='#FFFFFF'>" + 
 r_text[i]  + "</FONT></center><br />"); 
 	
+		// To add extra quotes from Business Websites online for our page.... 
+		
 		</SCRIPT LANGUAGE="JAVASCRIPT">
 		
-		<!-- To add extra quotes.... -->
+		
 
 <footer class="container-fluid bg-4 text-center">
  <p>Created by:<br>Daniel O'Brien and Samuel Oladimeji<br>Junior Certificate Coding Short-Course CBA 2018<br>St. Joseph's Secondary School, Rush Co. Dublin</p>
