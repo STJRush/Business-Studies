@@ -472,6 +472,21 @@ r_text[i]  + "</FONT></center><br />");
 		
 		</SCRIPT LANGUAGE="JAVASCRIPT">
 		
+		<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+		
 		
 
 <footer class="container-fluid bg-4 text-center">
