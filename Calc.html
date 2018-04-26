@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+  <label>Net Profit:</label>
+  <input id="inputFahrenheit" type="number" placeholder="Net Profit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Divideds Paid: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum/100)*15;
+}
+</script>
+
+</body>
+</html>
