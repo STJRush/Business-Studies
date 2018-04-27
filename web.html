@@ -163,7 +163,49 @@ a.nav-link:active
            text-decoration: none; 
 	   font-size: 22px;
      }
-			
+		
+		#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+		
   </style>
 	<!-- Very important CSS styling that ensures that the scale and responsive factors ofour website are correct -->
 	<!-- We have also added in a lot of design for our div's, containers and overall page -->
@@ -506,6 +548,14 @@ From time to time there may be field trips or guest speakers where the course al
 	
 	<!-- We are using Javascript to create a  Quote Generator. This can updated and changed around using other funcions available via JS, which islike a text-based program for Web Design -->
 	
+	<script>
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+	
 	<SCRIPT LANGUAGE="JAVASCRIPT">  
 <!-- // Our JS Code, to create a Random Quote Generator
 var r_text = new Array (); 
@@ -529,7 +579,18 @@ r_text[i]  + "</FONT></center><br />");
 		
 <footer class="container-fluid bg-4 text-center">
  <p>Created by:<br>Daniel O'Brien and Samuel Oladimeji<br>Junior Certificate Coding Short-Course CBA 2018<br>St. Joseph's Secondary School, Rush Co. Dublin</p>
-</footer>
+<div align="center">
+ <select>
+  <option value="parent">Parent</option>
+  <option value="teacher">Teacher</option>
+  <option value="student">Student</option>
+
+</select>
+		<button onclick="myFunction()">Show Snackbar</button>
+
+<div font-family: Georgia;  id="snackbar">Some text some message..</div>
+</div>
+		</footer>
 </body>
 </html>
 <!-- Thank You for viewing our website, and I hope you enjoyed it! -->
