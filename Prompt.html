@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function myPrompt() {
+    var person = prompt("Please Enter Your Name:", "");
+    if (person != null) {
+        document.getElementById("demo").innerHTML =
+        "Hello " + person + "!  Welcome to Business Studies in St. Joseph's Secondary School Rush";
+    }
+}
+window.onload = myPrompt;
+</script>
+
+</body>
+</html>
